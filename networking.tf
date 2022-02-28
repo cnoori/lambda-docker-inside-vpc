@@ -22,14 +22,6 @@ module "vpc" {
 }
 
 
-# resource "aws_internet_gateway" "igw" {
-#   vpc_id = module.vpc.vpc_id
-#   tags = {
-#     Name = "internet gw"
-#   }
-
-# }
-
 resource "aws_vpc_endpoint" "s3-endpoint" {
   vpc_id       = module.vpc.vpc_id
   service_name = "com.amazonaws.us-west-1.s3"
